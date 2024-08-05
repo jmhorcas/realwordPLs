@@ -1,0 +1,62 @@
+namespace Pizza
+
+features
+	Pizza {abstract true}
+		mandatory
+			Topping {abstract}
+				mandatory
+					Sauces {abstract}
+						alternative
+							Tomato
+							Cream
+							BBQ
+							Curry
+					Cheeses {abstract}
+						or
+							Cheese
+							Mozzarella
+							Gouda
+							Parmesan
+							Roquefort
+				optional
+					Vegetables {abstract}
+						or
+							Mushroom
+							Onion
+							Pepper
+							Corn
+							Broccoli
+							Spinach
+							Olives
+					Meats {abstract}
+						or
+							Ham
+							Salami
+							Bacon
+							Pepperoni
+							Chicken
+							Beef
+							Mince
+							"Chicken kebab"
+					"Fish & SeaFood" {abstract}
+						or
+							Tuna
+							Shrimps
+							Mussels
+					Extra {abstract}
+						or
+							Spicy
+							Egg
+							Pineapple
+							Oregano
+			Size {abstract}
+				alternative
+					Medium
+					Big
+		optional
+			"Half & Half"
+			CustomMade
+
+constraints
+	Oregano
+	Medium => !"Half & Half"
