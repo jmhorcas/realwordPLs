@@ -14,7 +14,7 @@ class ConfigurationsCSVReader(TextToModel):
     True, True, True,..., True
     ...
 
-    It has a "store_only_selected_elements" (default to False) to indicate that configurations
+    It has a "store_only_selected_elements" parameter (default to False) to indicate that configurations
     save only those elements with a True value.
     """
 
@@ -23,8 +23,8 @@ class ConfigurationsCSVReader(TextToModel):
         return 'csv'
 
     def __init__(self, path: str) -> None:
-        self.path = path
-        self._only_selected_elements = False
+        self.path: str = path
+        self._only_selected_elements: bool = False
 
     def store_only_selected_elements(self, only_selected_elements: bool = False) -> None:
         self._only_selected_elements = only_selected_elements
