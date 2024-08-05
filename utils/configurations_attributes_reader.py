@@ -3,73 +3,55 @@ from typing import Any
 
 from flamapy.core.transformations import TextToModel
 from flamapy.metamodels.configuration_metamodel.models import Configuration
-from flamapy.metamodels.fm_metamodel.models import FeatureModel
-from utils import utils
-
-
-CSV_SEPARATOR = ','
-LINE_SEPARATOR = '\n'
-DOUBLE_PRECISION = 4
-MIN_INT = 1
-MAX_INT = 100
 
 
 class ConfigurationsAttributesReader(TextToModel):
-    """Read a list of configurations along with their attributes in a CSV format.
+    """Read a list of configurations in a csv file.
 
-    The CSV format is as follows:
-    Feature1, Feature2, Feature3,...,FeatureN, Attribute1, Attribute2, Attribute3,..., AttributeM
-    true, true, false,..., true, 100, 1.5,..., false
-    true, false, false,..., false, 200, 1.0,..., true
-    true, true, true,..., true, 50, 0.25,..., true
+    The file format is as follows:
+    Configuration, Attribute1, Attribute2,..., AttributeN
+    "['Element1', 'Element2',..., 'ElementX']", value1, value2,..., valueN 
+    "['Element1', 'Element2',..., 'ElementY']", value1, value2,..., valueY
+    "['Element1', 'Element2',..., 'ElementZ']", value1, value2,..., valueZ
     ...
 
+    Each list represents the selected elements in a configuration.
+    The 'Configuration' column does not need to be the first column in the file,
+    but the configuration column must be called 'Configuration'.
     """
 
     @staticmethod
     def get_source_extension() -> str:
         return 'csv'
 
-    def __init__(self, path: str, source_model: FeatureModel) -> None:
+    def __init__(self, path: str) -> None:
         self.path = path
-        self.source_model = source_model
 
-    def set_configurations(self, configurations: list[Configuration]):
-        self.configurations = configurations
-
-    def transform(self) -> str:
+    def transform(self) -> list[tuple[Configuration, dict[str, Any]]]:
         with open(self.path, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile, delimiter=',', quotechar='"', skipinitialspace=True)
-
+            
             content_list = []
-            index = 1
             for row in reader:
-                content_list.append(from_csv_to_configurations(self.source_model, row, index))
-                index += 1
+                content_list.append(from_csv_to_configurations(row))
         return content_list
 
 
-def from_csv_to_configurations(fm: FeatureModel, content: dict[str, str], index: int) -> tuple[list[Configuration], dict[int, dict[str, Any]]]:
-    # content: CSV completo
+def from_csv_to_configurations(content: dict[str, str]) -> tuple[Configuration, dict[str, Any]]:
     """
         Returns a tuple that consists in:
-            - a list of configurations.
+            - the configuration.
             - a dictionary (key -> value), where:
-                - key is the index of the configuration.
-                - value is a dictionary of attributes' names -> attributes values.
+                - key is the attribute name.
+                - value is the attribute value.
     """
-    configuration_list = []
     attributes_dict = {}
-    index_attributes_dict = {}
+    elements = {element: True for element in eval(content['Configuration'])}
+    config = Configuration(elements)
     for key, value in content.items():
-        feature = fm.get_feature_by_name(key)
-        if not feature is None:
-            if value.lower() == "true":
-                configuration_list.append(feature)
-        else:
+        if key != 'Configuration':
             attributes_dict[key] = parse_value(value)
-            index_attributes_dict[index] = attributes_dict
-    return configuration_list, index_attributes_dict
+    return config, attributes_dict
 
 
 def parse_value(value: str) -> Any:

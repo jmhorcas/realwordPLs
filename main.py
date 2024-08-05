@@ -3,7 +3,16 @@ import argparse
 from flamapy.metamodels.fm_metamodel.transformations import UVLReader
 from flamapy.metamodels.bdd_metamodel.transformations import FmToBDD
 from flamapy.metamodels.bdd_metamodel.operations import BDDConfigurationsNumber, BDDSampling
-from utils import ConfigurationsCSVWriter, ConfigurationsCSVReader, ConfigurationsListWriter, ConfigurationsListReader
+from flamapy.metamodels.pysat_metamodel.transformations import FmToPysat
+from flamapy.metamodels.pysat_metamodel.operations import PySATSatisfiableConfiguration
+from utils import (
+    ConfigurationsCSVWriter, 
+    ConfigurationsCSVReader, 
+    ConfigurationsListWriter, 
+    ConfigurationsListReader,
+    ConfigurationsAttributesReader
+)
+from utils import utils
 
 
 def main(fm_filepath: str) -> None:
@@ -11,8 +20,10 @@ def main(fm_filepath: str) -> None:
 
     print(f'#Features: {len(fm.get_features())}')
     print(f'#Constraints: {len(fm.get_constraints())}')
-
+    
+    sat_model = FmToPysat(fm).transform()
     bdd_model = FmToBDD(fm).transform()
+
     n_configs = BDDConfigurationsNumber().execute(bdd_model).get_result()
     print(f'#Configs: {n_configs}')
 
@@ -38,7 +49,26 @@ def main(fm_filepath: str) -> None:
     sample4 = ConfigurationsListReader('configs.txt').transform()
     print(f'Equals: {set(sample3) == set(sample4)}')
     
+    configs_attributes = ConfigurationsAttributesReader('models/NamasteRincon_configs.csv').transform()
+    print(f'#Products in portfolio: {len(configs_attributes)}')
 
+    
+    for config_attr in configs_attributes:
+        satis_config_op = PySATSatisfiableConfiguration()
+        satis_config_op.set_configuration(config_attr[0], is_full=False)
+        satis = satis_config_op.execute(sat_model).get_result()
+        print(f'{config_attr[0]} -> {satis}')
+    
+    false_configs = []
+    for config_attr in configs_attributes:
+        config = utils.complete_configuration(config_attr[0], fm)
+        satis_config_op = PySATSatisfiableConfiguration()
+        satis_config_op.set_configuration(config, is_full=True)
+        satis = satis_config_op.execute(sat_model).get_result()
+        print(f'{config} -> {satis}')
+        if not satis:
+            false_configs.append((config_attr, config))
+            
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Product Line analysis.')

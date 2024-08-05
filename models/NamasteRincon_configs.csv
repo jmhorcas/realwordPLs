@@ -1,0 +1,43 @@
+Name, Configuration, Price
+Margarita, "['Oregano', 'Cheese', 'Tomato', 'Medium']", 7.00
+"Pan de la Casa", "['Oregano', 'Cheese', 'Cream', 'Medium']", 5.00
+Jamón, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Medium']", 8.00
+Salami, "['Oregano', 'Cheese', 'Tomato', 'Salami', 'Medium']", 8.00
+Bacon, "['Oregano', 'Cheese', 'Tomato', 'Bacon', 'Medium']", 8.00
+Pepperoni, "['Oregano', 'Cheese', 'Tomato', 'Pepperoni', 'Medium']", 8.00
+Caprichosa, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Mushroom', 'Medium']", 8.40
+Tuna, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Tuna', 'Onion', 'Medium']", 8.40
+Namasté, "['Oregano', 'Cheese', 'Tomato', 'Chicken', 'Onion', 'Pepper', 'Medium']", 8.40
+Barbacoa, "['Oregano', 'Cheese', 'BBQ', 'Ham', 'Bacon', 'Chicken', 'Medium']", 8.40
+Cinco Quesos, "['Oregano', 'Tomato', 'Mozzarella', 'Gouda', 'Parmesan', 'Roquefort', 'Medium']", 8.40
+Mexicana, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Beef', 'Pepper', 'Onion', 'Spicy', 'Medium']", 8.40
+Mafiosa, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Bacon', 'Pepperoni', 'Medium']", 8.40
+Vegetal, "['Oregano', 'Cheese', 'Tomato', 'Corn', 'Broccoli', 'Spinach', 'Mushroom', 'Olives', 'Medium']", 8.40
+Galicia, "['Oregano', 'Cheese', 'Tomato', 'Shrimps', 'Tuna', 'Mussels', 'Onion', 'Medium']", 8.40
+Carbonara, "['Oregano', 'Cheese', 'Cream', 'Bacon', 'Chicken', 'Onion', 'Egg', 'Medium']", 8.40
+Cuatro Estaciones, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Chicken', 'Tuna', 'Olives', 'Medium']", 8.40
+Hawaiana, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Pineapple', 'Medium']", 8.40
+León, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Chicken', 'Mushroom', 'Medium']", 8.40
+Boloñesa, "['Oregano', 'Cheese', 'Tomato', 'Onion', 'Mince', 'Medium']", 8.40
+Curry, "['Oregano', 'Cheese', 'Chicken kebab', 'Curry', 'Medium']", 8.40
+Margarita, "['Oregano', 'Cheese', 'Tomato', 'Big']", 11.50
+"Pan de la Casa", "['Oregano', 'Cheese', 'Cream', 'Big']", 10.00
+Jamón, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Big']", 12.50
+Salami, "['Oregano', 'Cheese', 'Tomato', 'Salami', 'Big']", 12.50
+Bacon, "['Oregano', 'Cheese', 'Tomato', 'Bacon', 'Big']", 12.50
+Pepperoni, "['Oregano', 'Cheese', 'Tomato', 'Pepperoni', 'Big']", 12.50
+Caprichosa, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Mushroom', 'Big']", 13.00
+Tuna, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Tuna', 'Onion', 'Big']", 13.00
+Namasté, "['Oregano', 'Cheese', 'Tomato', 'Chicken', 'Onion', 'Pepper', 'Big']", 13.00
+Barbacoa, "['Oregano', 'Cheese', 'BBQ', 'Ham', 'Bacon', 'Chicken', 'Big']", 13.00
+Cinco Quesos, "['Oregano', 'Tomato', 'Mozzarella', 'Gouda', 'Parmesan', 'Roquefort', 'Big']", 13.00
+Mexicana, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Beef', 'Pepper', 'Onion', 'Spicy', 'Big']", 13.00
+Mafiosa, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Bacon', 'Pepperoni', 'Big']", 13.00
+Vegetal, "['Oregano', 'Cheese', 'Tomato', 'Corn', 'Broccoli', 'Spinach', 'Mushroom', 'Olives', 'Big']", 13.00
+Galicia, "['Oregano', 'Cheese', 'Tomato', 'Shrimps', 'Tuna', 'Mussels', 'Onion', 'Big']", 13.00
+Carbonara, "['Oregano', 'Cheese', 'Cream', 'Bacon', 'Chicken', 'Onion', 'Egg', 'Big']", 13.00
+Cuatro Estaciones, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Chicken', 'Tuna', 'Olives', 'Big']", 13.00
+Hawaiana, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Pineapple', 'Big']", 13.00
+León, "['Oregano', 'Cheese', 'Tomato', 'Ham', 'Chicken', 'Mushroom', 'Big']", 13.00
+Boloñesa, "['Oregano', 'Cheese', 'Tomato', 'Onion', 'Mince', 'Big']", 13.00
+Curry, "['Oregano', 'Cheese', 'Chicken kebab', 'Curry', 'Big']", 13.00
