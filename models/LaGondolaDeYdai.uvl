@@ -1,0 +1,68 @@
+namespace Pizza
+
+features
+	Pizza {abstract}
+		mandatory
+			Topping {abstract}
+				or
+					Tomato
+					Cream
+					"BBQ sauce"
+					"Yogurt sauce"
+					"Argentinian sauce"
+					"Special sauce"
+					Mozzarella
+					"Mozzarella pearls"
+					"Goat cheese"
+					Emmental
+					Parmesan
+					Roquefort
+					Gorgonzola
+					Mushroom
+					Onion
+					"Caramelized onion"
+					"Cherry tomato"
+					Rocket
+					Capers
+					Pickle
+					Artichokes
+					"Black olives"
+					Vegetables
+					"York ham"
+					"Serrano ham"
+					Salami
+					Bacon
+					"Spicy chorizo"
+					Frankfurt
+					Chicken
+					Meat
+					"Spicy meat"
+					Sirloin
+					Kebab
+					Tuna
+					Shrimps
+					Anchovies
+					"Crab stick"
+					Egg
+					Pineapple
+					Garlic
+					"French fries"
+			Size {abstract}
+				alternative
+					Mini
+					Medium
+					Big
+		optional
+			"Half & Half"
+			"Double base"
+			"Gluten free"
+			"Closed pizza"
+				alternative
+					"Traditional calzone"
+					Chapata
+					Bombaa
+					Strudell
+constraints
+	"Gluten free" => ! Big & ! "Closed pizza"
+	"Closed pizza" => ! "Gluten free"
+	"Closed pizza" => Medium | Big

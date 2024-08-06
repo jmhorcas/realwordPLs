@@ -25,7 +25,7 @@ def main(fm_filepath: str) -> None:
     bdd_model = FmToBDD(fm).transform()
 
     n_configs = BDDConfigurationsNumber().execute(bdd_model).get_result()
-    print(f'#Configs: {n_configs}')
+    print(f'#Configs: {utils.int_to_scientific_notation(n_configs)}')
 
     sampling_op = BDDSampling()
     sampling_op.set_sample_size(5)
@@ -49,7 +49,7 @@ def main(fm_filepath: str) -> None:
     sample4 = ConfigurationsListReader('configs.txt').transform()
     print(f'Equals: {set(sample3) == set(sample4)}')
     
-    configs_attributes = ConfigurationsAttributesReader('models/NamasteRincon_configs.csv').transform()
+    configs_attributes = ConfigurationsAttributesReader('models/LaGondolaDeYdai_configs.csv').transform()
     print(f'#Products in portfolio: {len(configs_attributes)}')
 
     

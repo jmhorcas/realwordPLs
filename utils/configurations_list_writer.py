@@ -31,7 +31,6 @@ class ConfigurationsListWriter(ModelToText):
 
     def transform(self) -> str:
         with open(self.path, 'w', encoding='utf-8') as file:
-            result = f'{LINE_SEPARATOR.join(str(config.get_selected_elements()) 
-                                            for config in self.configurations)}'
+            result = f'{LINE_SEPARATOR.join(str(config.get_selected_elements()) for config in self.configurations)}'
             file.write(result)
         return result
