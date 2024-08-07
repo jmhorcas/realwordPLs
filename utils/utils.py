@@ -2,7 +2,7 @@ from flamapy.metamodels.configuration_metamodel.models import Configuration
 from flamapy.metamodels.fm_metamodel.models import FeatureModel, Feature
 
 
-def complete_configuration(configuration: Configuration, fm_model: FeatureModel) -> Configuration:
+def complete_configuration_with_parents(configuration: Configuration, fm_model: FeatureModel) -> Configuration:
     configs_elements = dict(configuration.elements)
     for element in configuration.get_selected_elements():
         feature = fm_model.get_feature_by_name(element)
