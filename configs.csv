@@ -1,6 +1,6 @@
 Pizza,Topping,Tomato,Cream,BBQ sauce,Curry sauce,Cheese,Mozzarella,Gouda,Parmesan,Roquefort,Mushroom,Onion,Pepper,Corn,Broccoli,Spinach,Olives,York ham,Salami,Bacon,Pepperoni,Chicken,Beef,Mince,Chicken kebab,Tuna,Shrimps,Mussels,Spicy,Egg,Pineapple,Oregano,Size,Medium,Big,Half & Half,CustomMade
-True,True,True,False,False,True,True,True,True,True,True,False,False,True,False,False,True,False,False,False,True,False,True,True,True,True,True,True,True,False,False,False,True,True,False,True,False,False
-True,True,False,True,True,True,True,True,True,True,False,False,False,False,True,False,True,True,True,False,False,False,True,False,True,True,False,False,False,False,False,False,True,True,True,False,False,True
-True,True,False,False,True,False,True,False,False,True,False,False,False,False,True,False,True,False,False,False,True,True,False,True,False,True,True,True,True,True,False,True,True,True,False,True,True,True
-True,True,True,True,True,False,True,False,False,False,False,True,False,True,False,True,True,True,True,False,True,True,True,True,True,True,True,False,True,False,False,False,True,True,False,True,False,True
-True,True,False,True,False,True,True,False,True,False,True,False,True,False,False,True,False,False,True,True,True,True,False,True,False,True,True,False,True,True,True,False,True,True,False,True,False,True
+True,True,True,False,True,True,True,False,True,False,False,True,False,True,True,False,False,True,False,True,True,True,False,True,True,False,True,True,False,False,True,True,True,True,False,True,False,True
+True,True,True,False,True,True,True,True,True,False,False,False,False,True,False,False,False,False,True,True,False,False,True,False,True,False,True,False,True,False,False,True,True,True,False,True,False,True
+True,True,True,True,False,True,True,True,False,False,True,False,False,False,False,True,True,False,True,False,True,True,False,False,False,False,True,False,True,True,True,True,True,True,True,False,False,True
+True,True,True,True,False,True,True,True,False,True,False,False,True,True,False,True,False,True,True,False,True,True,False,False,False,True,False,True,False,True,False,False,True,True,False,True,False,False
+True,True,True,True,False,True,True,True,True,False,True,False,False,False,False,False,False,True,False,False,False,False,True,False,False,False,False,True,True,True,True,True,True,True,True,False,False,False

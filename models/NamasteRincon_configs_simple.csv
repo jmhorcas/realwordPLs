@@ -1,0 +1,22 @@
+Name, Configuration, Price
+Margarita, "['Oregano', 'Cheese', 'Tomato']", 7.00
+"Pan de la Casa", "['Oregano', 'Cheese', 'Cream']", 5.00
+Jamón, "['Oregano', 'Cheese', 'Tomato', 'York ham']", 8.00
+Salami, "['Oregano', 'Cheese', 'Tomato', 'Salami']", 8.00
+Bacon, "['Oregano', 'Cheese', 'Tomato', 'Bacon']", 8.00
+Pepperoni, "['Oregano', 'Cheese', 'Tomato', 'Pepperoni']", 8.00
+Caprichosa, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Mushroom']", 8.40
+Tuna, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Tuna', 'Onion']", 8.40
+Namasté, "['Oregano', 'Cheese', 'Tomato', 'Chicken', 'Onion', 'Pepper']", 8.40
+Barbacoa, "['Oregano', 'Cheese', 'BBQ sauce', 'York ham', 'Bacon', 'Chicken']", 8.40
+Cinco Quesos, "['Oregano', 'Tomato', 'Mozzarella', 'Gouda', 'Parmesan', 'Roquefort']", 8.40
+Mexicana, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Beef', 'Pepper', 'Onion', 'Spicy']", 8.40
+Mafiosa, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Bacon', 'Pepperoni']", 8.40
+Vegetal, "['Oregano', 'Cheese', 'Tomato', 'Corn', 'Broccoli', 'Spinach', 'Mushroom', 'Olives']", 8.40
+Galicia, "['Oregano', 'Cheese', 'Tomato', 'Shrimps', 'Tuna', 'Mussels', 'Onion']", 8.40
+Carbonara, "['Oregano', 'Cheese', 'Cream', 'Bacon', 'Chicken', 'Onion', 'Egg']", 8.40
+Cuatro Estaciones, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Chicken', 'Tuna', 'Olives']", 8.40
+Hawaiana, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Pineapple']", 8.40
+León, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Chicken', 'Mushroom']", 8.40
+Boloñesa, "['Oregano', 'Cheese', 'Tomato', 'Onion', 'Mince']", 8.40
+Curry, "['Oregano', 'Cheese', 'Chicken kebab', 'Curry sauce']", 8.40

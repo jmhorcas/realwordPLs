@@ -66,15 +66,19 @@ def main(fm_filepath: str) -> None:
     sample4 = ConfigurationsListReader('configs.txt').transform()
     print(f'Equals: {set(sample3) == set(sample4)}')
     
-    configs_attributes = ConfigurationsAttributesReader('models/NamasteRincon_configs.csv').transform()
+    configs_attributes = ConfigurationsAttributesReader('models/NamasteRincon_configs_simple.csv').transform()
     print(f'#Products in portfolio: {len(configs_attributes)}')
 
     pl_model = ProductLineModel()
     pl_model.configurations = {config[0] for config in configs_attributes}
     print(pl_model)
-    prod_dist = PLProductDistribution().execute(pl_model).get_result()
+    prod_dist_op = PLProductDistribution().execute(pl_model)
+    prod_dist = prod_dist_op.get_result()
+    desc_stats = prod_dist_op.descriptive_statistics()
     print(f'Product distribution: {prod_dist}')
     print(f'#Product dist: {sum(prod_dist)}')
+    print(desc_stats)
+    
     fif = PLFeatureInclusionFrequency().execute(pl_model).get_result()
     fif = dict(sorted(fif.items(), key=lambda item: item[1]))
     print(f'Feature Inclusion Frequency:\n')
