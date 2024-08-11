@@ -4,51 +4,38 @@ features
 	Pizza {abstract true}
 		mandatory
 			Topping {abstract}
-				mandatory
-					Sauces {abstract}
-						alternative
-							Tomato
-							Cream
-							BBQ
-							Curry
-					Cheeses {abstract}
-						or
-							Cheese
-							Mozzarella
-							Gouda
-							Parmesan
-							Roquefort
-				optional
-					Vegetables {abstract}
-						or
-							Mushroom
-							Onion
-							Pepper
-							Corn
-							Broccoli
-							Spinach
-							Olives
-					Meats {abstract}
-						or
-							"York ham"
-							Salami
-							Bacon
-							Pepperoni
-							Chicken
-							Beef
-							Mince
-							"Chicken kebab"
-					"Fish & SeaFood" {abstract}
-						or
-							Tuna
-							Shrimps
-							Mussels
-					Extra {abstract}
-						or
-							Spicy
-							Egg
-							Pineapple
-							Oregano
+				or
+					Tomato
+					Cream
+					"BBQ sauce"
+					"Curry sauce"
+					Cheese
+					Mozzarella
+					Gouda
+					Parmesan
+					Roquefort
+					Mushroom
+					Onion
+					Pepper
+					Corn
+					Broccoli
+					Spinach
+					Olives
+					"York ham"
+					Salami
+					Bacon
+					Pepperoni
+					Chicken
+					Beef
+					Mince
+					"Chicken kebab"
+					Tuna
+					Shrimps
+					Mussels
+					Spicy
+					Egg
+					Pineapple
+					Oregano
 			Size {abstract}
 				alternative
 					Medium
@@ -59,4 +46,6 @@ features
 
 constraints
 	Oregano
+	Tomato | Cream | "BBQ sauce" | "Curry sauce"
+	Cheese
 	Medium => !"Half & Half"

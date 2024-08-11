@@ -6,6 +6,7 @@ from flamapy.metamodels.bdd_metamodel.transformations import FmToBDD
 from flamapy.metamodels.bdd_metamodel.operations import BDDConfigurationsNumber, BDDSampling, BDDCoreFeatures
 from flamapy.metamodels.pysat_metamodel.transformations import FmToPysat
 from flamapy.metamodels.pysat_metamodel.operations import PySATSatisfiableConfiguration
+from flamapy.metamodels.bdd_metamodel.operations import BDDSatisfiableConfiguration
 from utils import (
     ConfigurationsCSVWriter, 
     ConfigurationsCSVReader, 
@@ -14,7 +15,13 @@ from utils import (
     ConfigurationsAttributesReader
 )
 from utils import utils
-from operations import FullConfigurations
+from flamapy.metamodels.productline_metamodel.models import ProductLineModel
+from flamapy.metamodels.productline_metamodel.operations import (
+    FullConfigurations,
+    PLProductDistribution,
+    PLFeatureInclusionFrequency,
+    PLFeatureInclusionProbability
+)
 
 
 def main(fm_filepath: str) -> None:
@@ -59,14 +66,26 @@ def main(fm_filepath: str) -> None:
     sample4 = ConfigurationsListReader('configs.txt').transform()
     print(f'Equals: {set(sample3) == set(sample4)}')
     
-    configs_attributes = ConfigurationsAttributesReader('models/LaGondolaDeYdai_configs.csv').transform()
+    configs_attributes = ConfigurationsAttributesReader('models/NamasteRincon_configs.csv').transform()
     print(f'#Products in portfolio: {len(configs_attributes)}')
 
+    pl_model = ProductLineModel()
+    pl_model.configurations = {config[0] for config in configs_attributes}
+    print(pl_model)
+    prod_dist = PLProductDistribution().execute(pl_model).get_result()
+    print(f'Product distribution: {prod_dist}')
+    print(f'#Product dist: {sum(prod_dist)}')
+    fif = PLFeatureInclusionFrequency().execute(pl_model).get_result()
+    fif = dict(sorted(fif.items(), key=lambda item: item[1]))
+    print(f'Feature Inclusion Frequency:\n')
+    for feature, freq in fif.items():
+        print(f'{feature}: {freq}')
+    raise Exception
     
     for config_attr in configs_attributes:
-        satis_config_op = PySATSatisfiableConfiguration()
+        satis_config_op = BDDSatisfiableConfiguration()
         satis_config_op.set_configuration(config_attr[0], is_full=False)
-        satis = satis_config_op.execute(sat_model).get_result()
+        satis = satis_config_op.execute(bdd_model).get_result()
         print(f'{config_attr[0]} -> {satis}')
     
     print("full configurations:")
@@ -79,9 +98,9 @@ def main(fm_filepath: str) -> None:
         print(new_configs)
         full_configs.extend(new_configs)
         for config in new_configs:
-            satis_config_op = PySATSatisfiableConfiguration()
+            satis_config_op = BDDSatisfiableConfiguration()
             satis_config_op.set_configuration(config, is_full=True)
-            satis = satis_config_op.execute(sat_model).get_result()
+            satis = satis_config_op.execute(bdd_model).get_result()
             print(f'{config} -> {satis}')
             if not satis:
                 false_configs.append((config_attr, config))

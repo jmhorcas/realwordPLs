@@ -1,0 +1,28 @@
+namespace BMW
+
+features
+	BMW {abstract}
+		mandatory
+			"Body type"
+				alternative
+					"BMW i"
+					SUV
+					Sedan
+					Cabrio
+					Coupe
+					Touring
+					Tourer
+					Roadster
+					Compact
+			"Fuel Type"
+				alternative
+					Gasoline
+					Diesel
+					"Hybrid plugin"
+					"Full electric"
+			Transmission
+				alternative
+					Manual
+					Automatic
+constraints
+	

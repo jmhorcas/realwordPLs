@@ -8,7 +8,7 @@ Pepperoni, "['Oregano', 'Cheese', 'Tomato', 'Pepperoni', 'Medium']", 8.00
 Caprichosa, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Mushroom', 'Medium']", 8.40
 Tuna, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Tuna', 'Onion', 'Medium']", 8.40
 Namasté, "['Oregano', 'Cheese', 'Tomato', 'Chicken', 'Onion', 'Pepper', 'Medium']", 8.40
-Barbacoa, "['Oregano', 'Cheese', 'BBQ', 'York ham', 'Bacon', 'Chicken', 'Medium']", 8.40
+Barbacoa, "['Oregano', 'Cheese', 'BBQ sauce', 'York ham', 'Bacon', 'Chicken', 'Medium']", 8.40
 Cinco Quesos, "['Oregano', 'Tomato', 'Mozzarella', 'Gouda', 'Parmesan', 'Roquefort', 'Medium']", 8.40
 Mexicana, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Beef', 'Pepper', 'Onion', 'Spicy', 'Medium']", 8.40
 Mafiosa, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Bacon', 'Pepperoni', 'Medium']", 8.40
@@ -19,7 +19,7 @@ Cuatro Estaciones, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Chicken', 'Tuna
 Hawaiana, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Pineapple', 'Medium']", 8.40
 León, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Chicken', 'Mushroom', 'Medium']", 8.40
 Boloñesa, "['Oregano', 'Cheese', 'Tomato', 'Onion', 'Mince', 'Medium']", 8.40
-Curry, "['Oregano', 'Cheese', 'Chicken kebab', 'Curry', 'Medium']", 8.40
+Curry, "['Oregano', 'Cheese', 'Chicken kebab', 'Curry sauce', 'Medium']", 8.40
 Margarita, "['Oregano', 'Cheese', 'Tomato', 'Big']", 11.50
 "Pan de la Casa", "['Oregano', 'Cheese', 'Cream', 'Big']", 10.00
 Jamón, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Big']", 12.50
@@ -29,7 +29,7 @@ Pepperoni, "['Oregano', 'Cheese', 'Tomato', 'Pepperoni', 'Big']", 12.50
 Caprichosa, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Mushroom', 'Big']", 13.00
 Tuna, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Tuna', 'Onion', 'Big']", 13.00
 Namasté, "['Oregano', 'Cheese', 'Tomato', 'Chicken', 'Onion', 'Pepper', 'Big']", 13.00
-Barbacoa, "['Oregano', 'Cheese', 'BBQ', 'York ham', 'Bacon', 'Chicken', 'Big']", 13.00
+Barbacoa, "['Oregano', 'Cheese', 'BBQ sauce', 'York ham', 'Bacon', 'Chicken', 'Big']", 13.00
 Cinco Quesos, "['Oregano', 'Tomato', 'Mozzarella', 'Gouda', 'Parmesan', 'Roquefort', 'Big']", 13.00
 Mexicana, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Beef', 'Pepper', 'Onion', 'Spicy', 'Big']", 13.00
 Mafiosa, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Bacon', 'Pepperoni', 'Big']", 13.00
@@ -40,4 +40,4 @@ Cuatro Estaciones, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Chicken', 'Tuna
 Hawaiana, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Pineapple', 'Big']", 13.00
 León, "['Oregano', 'Cheese', 'Tomato', 'York ham', 'Chicken', 'Mushroom', 'Big']", 13.00
 Boloñesa, "['Oregano', 'Cheese', 'Tomato', 'Onion', 'Mince', 'Big']", 13.00
-Curry, "['Oregano', 'Cheese', 'Chicken kebab', 'Curry', 'Big']", 13.00
+Curry, "['Oregano', 'Cheese', 'Chicken kebab', 'Curry sauce', 'Big']", 13.00
