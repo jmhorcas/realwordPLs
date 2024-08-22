@@ -1,6 +1,6 @@
 import argparse
 
-from flamapy.metamodels.fm_metamodel.transformations import UVLReader
+from flamapy.metamodels.fm_metamodel.transformations import UVLReader, UVLWriter
 from flamapy.metamodels.fm_metamodel.operations import FMVariationPoints
 from flamapy.metamodels.bdd_metamodel.transformations import FmToBDD
 from flamapy.metamodels.bdd_metamodel.operations import BDDConfigurationsNumber, BDDSampling, BDDCoreFeatures
@@ -29,7 +29,11 @@ def main(fm_filepath: str) -> None:
 
     print(f'#Features: {len(fm.get_features())}')
     print(f'#Constraints: {len(fm.get_constraints())}')
-    
+    print(fm)
+    print(f'#Food with omega-3: {sum(attribute.name == 'Omega-3' for feature in fm.get_features() for attribute in feature.get_attributes())}')
+    UVLWriter('mi-model.uvl', fm).transform()
+    raise Exception
+
     sat_model = FmToPysat(fm).transform()
     bdd_model = FmToBDD(fm).transform()
 

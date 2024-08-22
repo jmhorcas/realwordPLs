@@ -1,0 +1,62 @@
+namespace Food
+
+// "Omega-3" sources, reference: https://link.springer.com/article/10.1186/s43094-024-00667-5
+features
+    Food {abstract}
+        or
+            Plants {abstract}
+                or
+                    Spinach
+                    Broccoli
+            Vegetables {abstract}
+                or
+                    Carrot {"Vitamin A" 1.346, "Vitamin B12" 0, "Vitamin B6" 0.2, "Vitamin C" 7, "Vitamin E" 0.5, Zinc 0.2, Selenium 0.0013}
+                    Tomato
+                    "Yellow bell pepper"
+                    Pea
+            Fruits {abstract}
+                or
+                    Peach
+                    Kiwi
+                    Lemon
+                    Avocado
+                    Blueberry
+                    Plum
+            Seeds
+                or
+                    Flaxseed {"Omega-3" 2350}
+                    "Chia seeds" {"Omega-3" 5050}
+                    Soybeans {"Omega-3" 670}
+            Offal {abstract}
+                optional
+                    Liver
+            Fish {abstract}
+                or
+                    Mackerel {"Omega-3" 4580}
+                    Salmon {"Omega-3" 2150}
+                    Herring {"Omega-3" 2150}
+                    Sardines {"Omega-3" 1463}
+                    Anchovies {"Omega-3" 411}
+            Nuts {abstract}
+                or
+                    Pistachio
+                    Walnuts {"Omega-3" 2570}
+                    Peanut
+            Seafood {abstract}
+                optional
+                    Oyster {"Omega-3" 329}
+            Legumes
+            Cereal {abstract}
+                optional
+                    "Whole rice"
+            Beverage {abstract}
+                optional
+                    Wine
+            Fats {abstract}
+                or
+                    "Olive oil"
+                    "Cod liver oil" {"Omega-3" 2438}
+            Others {abstract}
+                or
+                    Egg
+                    Caviar {"Omega-3" 1046}
